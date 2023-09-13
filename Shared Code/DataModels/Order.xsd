@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="gameOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="orderId" type="xs:string"/>
+        <xs:element name="customerName" type="xs:string"/>
+        <xs:element name="email" type="xs:string"/>
+        <xs:element name="shippingAddress">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="street" type="xs:string"/>
+              <xs:element name="city" type="xs:string"/>
+              <xs:element name="state" type="xs:string"/>
+              <xs:element name="postalCode" type="xs:string"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="orderItems">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="item" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="gameTitle" type="xs:string"/>
+                    <xs:element name="platform" type="xs:string"/>
+                    <xs:element name="quantity" type="xs:integer"/>
+                    <xs:element name="price" type="xs:decimal"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="orderTotal" type="xs:decimal"/>
+        <xs:element name="orderDate" type="xs:dateTime"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

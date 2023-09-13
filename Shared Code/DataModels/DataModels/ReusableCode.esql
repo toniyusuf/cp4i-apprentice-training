@@ -1,0 +1,31 @@
+BROKER SCHEMA DataModels
+
+
+CREATE PROCEDURE generateOrderID() RETURNS CHARACTER
+BEGIN
+	DECLARE uniqueID CHARACTER;
+	
+	-- Generate a UUID and convert it to a character string
+	SET uniqueID = UUIDASCHAR;
+	
+	RETURN uniqueID;
+END;
+
+CREATE FUNCTION calculateOrderTotal (IN qty INT, IN price FLOAT) RETURNS FLOAT
+BEGIN
+	DECLARE total FLOAT;
+
+	-- Calculate the total cost
+	SET total = qty * price;
+
+	RETURN total;
+END;
+
+CREATE COMPUTE MODULE SetEmailProperties
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		SET OutputRoot.EmailOutputHeader.To = InputRoot.XMLNSC.gameOrder.email;
+		SET OutputRoot.EmailOutputHeader.Subject = 'Order ' || InputRoot.XMLNSC.gameOrder.orderId || ' Confirmed!';
+		RETURN TRUE;
+	END;
+END MODULE;

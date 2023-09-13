@@ -1,0 +1,6 @@
+CustomerName,Email,Street,City,State,PostalCode,GameTitle,Platform,Quantity,Price,OrderDate
+John Doe,john.doe@example.com,123 Main Street,New York,NY,10001,The Legend of Adventure,PlayStation 5,2,59.99,2023-09-15T10:30:00
+Jane Smith,jane.smith@example.com,456 Elm Street,Los Angeles,CA,90001,Cyberpunk Odyssey,Xbox Series X,1,49.99,2023-09-15T11:15:00
+Michael Johnson,michael.johnson@example.com,789 Oak Avenue,San Francisco,CA,94101,Space Exploration: Odyssey,PC,3,39.99,2023-09-16T09:45:00
+Emily Davis,emily.davis@example.com,101 Pine Road,Boston,MA,02101,Fantasy Quest,Nintendo Switch,2,54.99,2023-09-16T14:20:00
+David Lee,david.lee@example.com,222 Birch Lane,Chicago,IL,60601,The Galaxy Conqueror,PlayStation 5,1,69.99,2023-09-17T08:30:00
