@@ -1,0 +1,3 @@
+mqsisetdbparms -w /home/student/IBM/ACET12/workspace1/TEST_SERVER/ -n mq::qm1credentials -u app -p passw0rd
+
+mqsisetdbparms -w /home/student/IBM/ACET12/workspace1/TEST_SERVER/ -n smtp::emailCred -u <username> -p <password>
