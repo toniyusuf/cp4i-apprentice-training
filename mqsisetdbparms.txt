@@ -1,3 +1,5 @@
 mqsisetdbparms -w /home/student/IBM/ACET12/workspace1/TEST_SERVER/ -n mq::qm1credentials -u app -p passw0rd
 
 mqsisetdbparms -w /home/student/IBM/ACET12/workspace1/TEST_SERVER/ -n smtp::emailCred -u <username> -p <password>
+
+${CURRENT_TIMESTAMP} INFO: Order received and validated from ${LocalEnvironment.File.Name} file${CURRENT_TIMESTAMP} INFO: Order no ${Root.XMLNSC.gameOrder.orderId} created${CURRENT_TIMESTAMP} INFO: Order sent to the output queue
